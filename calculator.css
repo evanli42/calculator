@@ -1,5 +1,8 @@
-div {
-  border: solid red 1px;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #Title {
@@ -12,29 +15,70 @@ div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 440px;
+  border: 10px solid rgb(74, 74, 119);
+  border-radius: 20px;
+  background-color: black;
 }
-.display {
+
+#display {
   display: flex;
   height: 50px;
-  width: 400px;
-  background-color: rgb(214, 243, 170);
+  width: 380px;
+  background-color: rgb(172, 240, 192);
   border: 10px solid black;
   border-radius: 5px;
+  font-size: 40px;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 20px;
+}
+
+#currentOperand {
+  font-size: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .calcButtonsContainer {
   display: grid;
-  grid-gap: 0.1em;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  grid-gap: 0.5em;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "header header header header";
   height: 600px;
   width: 400px;
   border: 10px solid aqua;
-  border-radius: 5px;
+  border-radius: 20px;
+  background-color: black;
+  padding: 10px;
 }
 
 .calcButton {
   font-size: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   background-color: aquamarine;
+  border-color: black;
+}
+
+.operator {
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: gray;
+  border-color: black;
+}
+
+.clearButton {
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: rgb(212, 142, 212);
+  grid-area: header;
+  border-color: black;
+}
+
+.equalButton {
+  background-color: gray;
+  border-radius: 20px;
+  border-color: black;
 }
